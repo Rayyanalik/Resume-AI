@@ -1,3 +1,4 @@
+# AI - POWERED RESUME AND COVER LETTER GENERATOR
 
 I love the idea of creating an AI-powered resume and cover letter generator! This kind of application can help job seekers present themselves more effectively to potential employers. Let's create a sleek, Apple-inspired design that emphasizes elegance, minimalism, and functionality.
 
