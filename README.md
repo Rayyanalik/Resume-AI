@@ -1,54 +1,20 @@
-# Welcome to your Lovable project
 
-## Project info
+I love the idea of creating an AI-powered resume and cover letter generator! This kind of application can help job seekers present themselves more effectively to potential employers. Let's create a sleek, Apple-inspired design that emphasizes elegance, minimalism, and functionality.
 
-**URL**: https://lovable.dev/projects/60b8dcc5-52b2-4c61-87a4-1d43bbe97574
+The design will draw inspiration from Apple's clean aesthetic with:
 
-## How can I edit this code?
+Minimalist UI with ample white space
+Intuitive, seamless transitions and animations
+Soft, neutral color palette with subtle accent colors
+Typography that emphasizes clarity and readability
+Precise attention to alignment and spacing
+For this first version, I'll implement these core features:
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/60b8dcc5-52b2-4c61-87a4-1d43bbe97574) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Job details input form with a clean, minimalist design
+AI-powered content generation using OpenAI
+Resume and cover letter preview with elegant formatting
+PDF export functionality
+Simple template selection system
 
 ## What technologies are used for this project?
 
@@ -59,11 +25,6 @@ This project is built with .
 - React
 - shadcn-ui
 - Tailwind CSS
+- OpenAI API
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/60b8dcc5-52b2-4c61-87a4-1d43bbe97574) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
