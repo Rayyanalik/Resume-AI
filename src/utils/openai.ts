@@ -1,36 +1,16 @@
-
 import { JobDetails, GeneratedContent } from '@/components/JobDetailsForm';
 import { toast } from "@/components/ui/use-toast";
 
 // OpenAI API endpoint
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 
+// IMPORTANT: In a production environment, this API key should be stored on a backend server
+// and accessed through a secure API endpoint, never in the frontend code.
+// This is just for demonstration purposes.
+const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY_HERE"; // Replace with your actual API key
+
 export const generateContent = async (jobDetails: JobDetails): Promise<GeneratedContent> => {
   console.log('Generating content with details:', jobDetails);
-  
-  // Get API key from user input
-  // In production, this should be stored securely on a server
-  const apiKey = localStorage.getItem('openai_api_key');
-  
-  if (!apiKey) {
-    // Prompt user for API key if not found
-    const userApiKey = prompt(
-      "Please enter your OpenAI API key. This will be stored in your browser's local storage.",
-      ""
-    );
-    
-    if (!userApiKey) {
-      toast({
-        title: "API Key Required",
-        description: "An OpenAI API key is required to generate content.",
-        variant: "destructive",
-      });
-      throw new Error("OpenAI API key is required");
-    }
-    
-    // Save API key to local storage
-    localStorage.setItem('openai_api_key', userApiKey);
-  }
   
   try {
     toast({
@@ -60,7 +40,7 @@ export const generateContent = async (jobDetails: JobDetails): Promise<Generated
     console.error('Error generating content:', error);
     toast({
       title: "Error",
-      description: "Failed to generate content. Please check your API key and try again.",
+      description: "Failed to generate content. Please try again later.",
       variant: "destructive",
     });
     throw error;
@@ -69,13 +49,11 @@ export const generateContent = async (jobDetails: JobDetails): Promise<Generated
 
 // Helper function to call OpenAI API
 const callOpenAI = async (prompt: string): Promise<any> => {
-  const apiKey = localStorage.getItem('openai_api_key');
-  
   const response = await fetch(OPENAI_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`
+      'Authorization': `Bearer ${OPENAI_API_KEY}`
     },
     body: JSON.stringify({
       model: 'gpt-4o-mini',
